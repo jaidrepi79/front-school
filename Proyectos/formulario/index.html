@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de la tienda e-commerce de Fotografía</title>
+</head>
+<body>
+  <!-- Encabezado de la página -->
+  <header>
+    <nav>
+      <img src="./images/logo369.png" alt="Logo de la tienda">
+    </nav>
+  </header>
+
+  <!-- Contenido principal de la página -->
+<main>
+  <!-- Formulario de envío -->
+  <!--<form action="./gracias.html" method="get">-->
+    <form id="formulario">
+    <section>
+      <!-- Sección de datos personales -->
+      <fieldset>
+        <legend><b> Datos personales</b></legend>
+        <label for="nombre">Nombre *</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" placeholder="Ingrese su email" required>
+      </fieldset>
+      </section>
+      <br>
+      <!-- Sección de información de compra -->
+      <section>
+        <fieldset>
+        <legend><b>Información de compra</b></legend> 
+        <label for="fecha">Fecha de compra</label>
+        <input type="date" id="fecha" name="fecha">
+        <br><br>
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su teléfono">
+        <br><br>
+        <label for="direccion">Dirección de envío</label>
+        <input type="text" id="direccion" name="direccion" placeholder="Ingrese su dirección">
+      </fieldset>
+      </section>
+      <br>
+      <!-- Sección de información de pago -->
+      <section>
+        <fieldset>
+        <legend><b>Información de pago</b></legend>
+        <label for="tarjeta">Número de tarjeta</label>
+        <input type="text" id="tarjeta" name="tarjeta" placeholder="Ingrese su número de tarjeta">
+        <br><br>
+        <label for="cvv">CVV</label>
+        <input type="password" id="cvv" name="cvv" placeholder="Ingrese su CVV">
+        <br><br>
+        <label for="contrasena">Contraseña *</label>
+        <input type="password" id="contrasena" name="contrasena" placeholder="Ingrese su contraseña" required>
+        </fieldset>
+      </section>
+      <br>
+      <!-- Botón de envío -->
+      <fieldset>
+      <input type="submit" value="Enviar">
+    </fieldset>
+    </form>
+  </main>
+  <script>
+    document.getElementById("formulario").addEventListener("submit", function(event) {
+      event.preventDefault(); // Evita el envío predeterminado del formulario
+      window.location.href = "./gracias.html"; // Redirige a la página deseada
+    });
+  </script>  
+</body>
+</html>
+
+<!--document.getElementById("formulario"): Selecciona el elemento del formulario con el ID "formulario".
+.addEventListener("submit", function(event) { ... }): Agrega un event listener al formulario para capturar el evento de envío (submit).
+event.preventDefault();: Llama al método preventDefault() en el objeto del evento para evitar que el formulario se envíe de manera predeterminada, lo cual detiene el comportamiento estándar del formulario.
+window.location.href = "./gracias.html";: Cambia la ubicación de la ventana actual redirigiéndola a la página "./gracias.html", lo que significa que después de hacer clic en el botón de envío, se redirigirá a esa página.-->
